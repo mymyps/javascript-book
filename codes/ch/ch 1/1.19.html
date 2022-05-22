@@ -3,7 +3,8 @@
     <head>
         <meta charset="utf-8">
         <title>vue 시작하기!!</title>
-        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     </head>
     <body>
 
@@ -14,6 +15,16 @@
         </div>
 
         <script type="text/javascript">
+
+            // v-if / v-show 차이점은 v-if같은 경우 초기에 렌더링 되지 않음
+            // 하지만, v-show는 초기에 렌더링하고 참/거짓에 따라 css의 dispaly를 토글함(on/off 같은)
+
+            // v-if 조건에 맞을 때 렌더링하므로 초기에 매누 빠르게 렌더링화면을 출력함
+            // 조건에 따라 자주 바뀐다면 v-if 보다 v-show를 사용하는 것이 성능 향상에 도움됨
+
+            // 자주사용 : v-show
+            // 자주 미사용 : v-if
+
         let app = new Vue({
             el: '#start',
             data () {

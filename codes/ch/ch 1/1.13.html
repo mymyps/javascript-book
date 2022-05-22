@@ -3,7 +3,8 @@
     <head>
         <meta charset="utf-8">
         <title>vue 시작하기!!</title>
-        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     </head>
     <body>
 
@@ -21,8 +22,19 @@
                     date: new Date()
                 }
             },
+            // 계산된 속성
             computed: {
                 calcDate: function () {
+                    // 계산된 값을 반환
+                    // calcDate 에서 this를 사용하여 date에 접근하는데, vue 인스턴스 내부에서
+                    // data 메소드에 정의된 값을 사용하기 위해서는 this를 이용하여 참조해야함
+
+                    // 템플릿 문자열(₩) 역 따옴표 사용
+                    // + 연산자를 사용하여 문자를 조합하지 않음
+
+                    // computed를 사용하지 않으면 html 내에 return 문장을 모두 기입해야함
+                    // 유지보수 측면에서 효율설이 좋음
+
                   return `${this.date.getFullYear()}-${parseInt(this.date.getMonth()) + 1}-${this.date.getDay()}`
                 }
             }

@@ -3,11 +3,17 @@
     <head>
         <meta charset="utf-8">
         <title>vue 시작하기!!</title>
-        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     </head>
     <body>
 
         <div id="start">
+            <!-- 
+            v-on:click.right
+            v-on:click.left
+            v-on:click.middle 
+            -->
             <button type="button" name="button" v-on:click="test('t', $event)">인자전달</button>
         </div>
 

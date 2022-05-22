@@ -3,11 +3,13 @@
     <head>
         <meta charset="utf-8">
         <title>vue 시작하기!!</title>
-        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     </head>
     <body>
 
         <div id="start">
+            <!-- parseInt 사용 이유 : 문자열 타입이기 때문에 +1 할떄 옆으로 붙는 현상이 발생 -->
             <h1>오늘의 날짜 : {{date.getFullYear()}}-{{parseInt(date.getMonth()) + 1}}-{{date.getDay()}}</h1>
         </div>
 

@@ -7,6 +7,10 @@
     </head>
     <body>
 
+        <!-- 단반향 바인딩을 하기위해 data를 정의해야함
+        각 값이 input 태그 value 속성에 존재하는 값 또는 option 값이어야 정상적으로 선택됨
+        만약 없는 값을 넣어주면 아무것도 선택되지 않음. 이때 에러는 발생하지 않음 -->
+
         <div id="start">
             <div class="select">
                 <select v-model="select">

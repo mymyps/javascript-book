@@ -3,7 +3,8 @@
     <head>
         <meta charset="utf-8">
         <title>vue 시작하기!!</title>
-        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     </head>
     <body>
 
@@ -21,8 +22,9 @@
                     sum: 0
                 }
             },
+            // data의 변경을 감지할때만 알려주면 됨. 그리고 변경됐을 때 어떤 작업을 할지 만들면 됨
             watch: {
-                value: function (d) {
+                value: function (d) { // 변경된 값을 첫 번째 인자로 받음
 
                     if(!isNaN(d)) {
                         this.sum += parseInt(d)

@@ -3,7 +3,8 @@
     <head>
         <meta charset="utf-8">
         <title>vue 시작하기!!</title>
-        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     </head>
     <body>
 
@@ -13,17 +14,34 @@
         let app = new Vue({
             el: '#start',
             created () {
+                // 인스턴스 생성 후 호출, 아직 마운트는 호출되기 전
                 console.log('created')
             },
             beforeCreate () {
+                // 인스턴스가 생성되기 전 호출
                 console.log('beforeCreated')
             },
             mounted () {
+                // el에 정의한 vue 인스턴스를 포함 시킴. mounted가 호출될 때는 el에 정의된 부분에 vue 인스턴스가 포함된 상태. 즉, 모든 화면이 렌더링이 완료된 상태
                 console.log('mounted')
             },
             beforeMount () {
+                // 데이터가 돔에 마운팅 되지 전 호출(ssr에서는 호출되지 않음)
                 console.log('beforeMounted')
-            }
+            },
+            beforeUpdate() {
+                // vue 인스턴스에 생성한 데이터가 변경될 때 가상돔이 재 렌더링, 패치가 되기 전에 호출(ssr에서는 호출되지 않음)
+                console.log('beforeUpdate')
+            },
+            update () {
+                // 인스턴스에 생성한 데이터가 변결될 때 가삼돔이 재 렌더링, 패치가 된 후 호출
+            },
+            beforeDestroy() {
+                // 인스턴스가 제거되기 전에 호출(ssr에서는 호출되지 않음)
+            },
+            destroyed() {
+                // 인스턴스가 제가된 후에 호출
+            },
         })
         </script>
     </body>

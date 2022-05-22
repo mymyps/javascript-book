@@ -3,7 +3,8 @@
     <head>
         <meta charset="utf-8">
         <title>vue 시작하기!!</title>
-        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     </head>
     <body>
 
@@ -29,7 +30,8 @@
             computed: {
                 calcDataSet : function () {
                     return this.dataSet.filter(function (item){
-                        return  ! (item.t % 3)
+                        // 비교 연산시 !을 이용하는게 좀 더 빠르게 동작
+                        return  ! (item.t % 3) // (item.t % 3)
                     })
                 }
             }

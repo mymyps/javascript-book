@@ -8,4 +8,43 @@
     <body>
         <h1>vue 시작하기!!</h1>
     </body>
+
+
+    <!-- 개발버전, 도움되는 콘솔 경고를 포함. -->
+    <!-- 프로토 타이핑또는 학습 목적이라면, 아래 코드로 최신 버전을 사용할 수 있습니다. -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    
+    <!-- 상용버전, 속도와 용량이 최적화됨. -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    
+    
+    <!-- 프로덕션 환경의 경우 특정 버전 추가 -->
+    <!-- 새 버전에서 예상치 못한 오류를 방지를 위해 특정 버전의 빌드 파일을 추가 추천 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+    
+    <!-- 배포된 사이트에서는 프로덕션 버전 사용 및 vue.min.js 버전으로 대체 (속도에 최적화된 빌드) -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0/dist/vue.min.js"></script>
+
+    null : null 타입
+    undefined : 값이 할당되지 않은 타입
+    number : 숫자 타입 / 숫자 자료형에서 NaN은 숫자가 아닌것을 의미
+
+    JSON.stringify : json, array를 문자열로 바꿀 때 사용
+    JSON.parse : JSON.stringify 처리되어 문자열로된 json, array를 다시 json, array 되돌리는데 사용
+
+    비구조 배열
+    let foo = [1, 2, 3];
+    let [one, two, three] = foo;
+
+    let foo = [1, 2, 3];
+    let [one, ...two] = foo;
+
+    let foo = {a:1, b:null};
+    let {a, b, c=10} = foo;
+    
+
+    CSR : client side rendering 페이지를 받아와 js를 실행하여 렌더링하는 방식
+    SSR : server side rendering 서버에서 js가 실행된 결과를 렌더링하는 방식
+    CDN : content delivery network 콘텐츠의 트래픽을 분산시키는 역할
+
 </html>

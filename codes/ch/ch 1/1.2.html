@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>vue 시작하기!!</title>
-        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     </head>
     <body>
         <h1>vue 시작하기!!</h1>
@@ -11,12 +11,12 @@
             {{ message }}
         </div>
         <script type="text/javascript">
-        let app = new Vue({
-            el: '#start',
-            data: {
-                message: '!!!!!hello world!!!!'
-            }
-        })
+            let app = new Vue({
+                el: '#start',   // html tag id 값을 지정
+                data: {
+                    message: '!!!!!hello world!!!!' //{{}} 중첩 중괄호를 통해 데이터 바인딩
+                }
+            });
         </script>
     </body>
 </html>
